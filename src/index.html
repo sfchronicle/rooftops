@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <%= t.include("partials/_head.html") %>
+    <%= t.include("partials/_analytics.html") %>
+  </head>
+  <script>  var HDN = HDN || {}  </script>
+
+  <body>
+
+    <div class="outer">
+
+    <div class="interactive-wrapper">
+
+      <div class="interactive-header">
+        <div class="hed">The rooftops of SF</div>
+        <div class="chatter">Tucked amid San Francisco’s towers are 10 unusual perches as high as 16 stories, a collection of rooftop public spaces unmatched in any other city. Here’s our guide to finding them — including the obstacles to savoring the views.</div>
+      </div>
+      <div class="mobile-container">
+
+        <div class="info">
+        </div>
+        <div class="image">
+          <img class="background" src="../assets/graphics/rooftops_mobile.jpeg" usemap="#imageMap">
+          <map name="imageMap">
+            <area class="map-group" shape="rect" coords="322,1274,429,1371" alt="federal" title="federal"/>
+            <area class="map-group" shape="rect" coords="605,1109,681,1182" alt="hampton" title="hampton"/>
+            <area class="map-group" shape="rect" coords="790,1075,860,1142" alt="intercontinental" title="intercontinental"/>
+            <area class="map-group" shape="rect" coords="610,839,821,1020" alt="westfield" title="westfield"/>
+            <area class="map-group" shape="rect" coords="1301,611,1394,689" alt="543 howard" title="543 howard"/>
+            <area class="map-group" shape="rect" coords="860,611,911,659" alt="one kearny" title="one kearny"/>
+            <area class="map-group" shape="rect" coords="1216,466,1331,569" alt="100 1st st" title="100 1st st"/>
+            <area class="map-group" shape="rect" coords="871,482,960,548" alt="one montgomery" title="one montgomery"/>
+            <area class="map-group" shape="rect" coords="977,118,1065,185" alt="343 sansome" title="343 sansome"/>
+            <area class="map-group" shape="rect" coords="1183,116,1260,188" alt="150 california" title="150 california"/>
+          </map>
+        </div>
+
+      </div>
+      <div class="flex-container">
+        <div class="image">
+          <div class="tooltip" id="tooltip"></div>
+          <img class="background" src="../assets/graphics/rooftops_desktop.jpeg" usemap="#imageMap">
+          <map name="imageMap">
+            <map name="imageMap">
+              <area class="map-group" shape="rect" coords="322,1274,429,1371" alt="federal" title="federal"/>
+              <area class="map-group" shape="rect" coords="605,1109,681,1182" alt="hampton" title="hampton"/>
+              <area class="map-group" shape="rect" coords="790,1075,860,1142" alt="intercontinental" title="intercontinental"/>
+              <area class="map-group" shape="rect" coords="610,839,821,1020" alt="westfield" title="westfield"/>
+              <area class="map-group" shape="rect" coords="1301,611,1394,689" alt="543 howard" title="543 howard"/>
+              <area class="map-group" shape="rect" coords="860,611,911,659" alt="one kearny" title="one kearny"/>
+              <area class="map-group" shape="rect" coords="1216,466,1331,569" alt="100 1st st" title="100 1st st"/>
+              <area class="map-group" shape="rect" coords="871,482,960,548" alt="one montgomery" title="one montgomery"/>
+              <area class="map-group" shape="rect" coords="977,118,1065,185" alt="343 sansome" title="343sansome"/>
+              <area class="map-group" shape="rect" coords="1183,116,1260,188" alt="150 california" title="150 california"/>
+            </map>
+          </map>
+        </div>
+      </div>
+      <div class="interactive-credit">
+        <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
+        <div class="entry">John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
+      </div>
+
+    </div>
+
+    </div>
+
+    <script>
+      var mapData = <%= JSON.stringify(csv.map_data) %>;
+    </script>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>
