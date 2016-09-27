@@ -128,6 +128,7 @@ li {
   }
   @media @tablet {
     padding: 10px;
+    padding-bottom: 5px;
   }
   @media @tablet {
     padding: 5px;
@@ -582,6 +583,21 @@ header {
   cursor: pointer;
 }
 
+.image {
+  display: block;
+  text-align: center;
+  width: 100%;
+  &.hideimg {
+    display: none;
+  }
+}
+
+.outer {
+  @media @tablet {
+    margin: 0;
+  }
+}
+
 .tooltip {
   position: absolute;
   background: white;
@@ -597,10 +613,20 @@ header {
   &.hide {
     display: none;
   }
+  @media @mobile {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
 }
 
 .address-group {
   width: 400px;
+  @media @mobile {
+    width: 100%;
+  }
+  text-align: left;
   img {
     width: 100%;
   }
@@ -619,5 +645,8 @@ header {
     // padding-left: 5px;
     float:right;
     cursor: pointer;
+    @media @mobile {
+      display: none;
+    }
   }
 }
