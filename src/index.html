@@ -12,7 +12,7 @@
   </head>
   <script>  var HDN = HDN || {}  </script>
 
-  <body>
+  <body is="responsive-body">
 
     <div class="outer">
 
@@ -20,10 +20,10 @@
 
       <div class="interactive-header">
         <div class="hed">Views make downtown SF rooftops worth the walk</div>
-        <div class="chatter">Tucked amid San Francisco’s towers are 10 unusual perches as high as 16 stories, a collection of rooftop public spaces unmatched in any other city. Here’s our guide to finding them — including the obstacles to savoring the views. <div>Click on the map below to see each rooftop.</div></div>
+        <div class="chatter">Tucked amid San Francisco’s towers are 10 unusual perches as high as 16 stories, a collection of rooftop public spaces unmatched in any other city. Here’s our guide to finding them.<div>Click on the map below to see each rooftop.</div></div>
       </div>
       <div class="image mobile hideimg">
-        <img class="background" src="../assets/graphics/rooftops_mobile.jpeg" usemap="#imageMap">
+        <img class="background" src="./assets/graphics/rooftops_mobile.jpeg" usemap="#imageMap">
         <map name="imageMap">
           <area class="map-group-mobile" shape="rect" coords="216,18,236,39" alt="150california" title="150california"/>
           <area class="map-group-mobile" shape="rect" coords="177,20,197,40" alt="343sansome" title="343sansome"/>
@@ -40,7 +40,7 @@
       </div>
       <div class="image ipad hideimg">
         <div class="tooltip hide" id="tooltip-ipad"></div>
-        <img class="background" src="../assets/graphics/rooftops_ipad.jpeg" usemap="#imageMapIpad">
+        <img class="background" src="./assets/graphics/rooftops_ipad.jpeg" usemap="#imageMapIpad">
         <map name="imageMapIpad">
           <area class="map-group-ipad" shape="rect" coords="516,43,563,91" alt="150california" title="150california"/>
           <area class="map-group-ipad" shape="rect" coords="429,48,473,85" alt="343sansome" title="343sansome"/>
@@ -56,7 +56,7 @@
       </div>
       <div class="image desktop hideimg">
         <div class="tooltip hide" id="tooltip-desktop"></div>
-        <img class="background" src="../assets/graphics/rooftops_desktop.jpeg" usemap="#imageMapDesktop">
+        <img class="background" src="./assets/graphics/rooftops_desktop.jpeg" usemap="#imageMapDesktop">
         <map name="imageMapDesktop">
           <area class="map-group-desktop" shape="rect" coords="607,58,663,104" alt="150california" title="150california"/>
           <area class="map-group-desktop" shape="rect" coords="502,56,554,101" alt="343sansome" title="343sansome"/>
@@ -82,6 +82,7 @@
     <script>
       var mapData = <%= JSON.stringify(csv.map_data) %>;
     </script>
+    <script src="http://projects.sfchronicle.com/shared/js/responsive-child.js"></script>
 
     <script src="app.js" async></script>
     <%= t.include("partials/_helloSFC.html") %>
